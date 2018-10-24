@@ -18,11 +18,11 @@ class League {
   
   positionFor(name) {
   	let teams = this.standings();
-  	for (let i = 0; i < teams.length; i++) {
-  		if(name === teams[i].length) {
-  			return teams[i].length + 1;
-  		}
-  	}
+  	let team = teams.find(teamName => teamName.name == name);
+    let pos = teams.indexOf(team);  
+
+    return pos + 1;
+  	
 
   }
 
