@@ -4,5 +4,10 @@ class Team {
     this.name = options.name || '';
     this.overtimeLosses = options.overtimeLosses || 0;
     this.wins = options.wins || 0;
+    this.points = ((this.wins * 2) + (this.losses * 0) + (this.overtimeLosses * 1));
   }
+
+  
+
+
 }
