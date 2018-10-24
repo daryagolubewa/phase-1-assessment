@@ -6,7 +6,7 @@ describe("ShippingContainer", () => {
         shippingContainer = new ShippingContainer({destination: 'Hawaii', boxes: boxes, maxWeight: 500, maxBoxs: 10});
     });
 
-    describe("attributes", () => {
+    xdescribe("attributes", () => {
         it("has a destination", () => {
             expect(shippingContainer.destination).toEqual('Hawaii');
         });
@@ -37,12 +37,12 @@ describe("ShippingContainer", () => {
 // PENDING
 // =========
 
-    xdescribe("working with boxes", () => {
+    describe("working with boxes", () => {
         describe("function currentWeight", () => {
             describe("when empty", () => {
                 let emptyShippingContainer;
                 beforeEach(() => {
-                    emptyShippingContainer = new ShippingContainer({destination: 'Borneo', boxes: [], max_boxes: 10, max_weight: 500});
+                    emptyShippingContainer = new ShippingContainer({destination: 'Borneo', boxes: [], maxBoxes: 10, maxWeight: 500});
                 });
 
                 it("returns 0", () => {
@@ -83,7 +83,7 @@ describe("ShippingContainer", () => {
             describe("when exceeding max weight", () => {
                 let smallerShippingContainer;
                 beforeEach(() => {
-                    smallerShippingContainer = new ShippingContainer({destination: 'Guangzhou', boxes: boxes, max_weight: 425, max_boxes: 10});
+                    smallerShippingContainer = new ShippingContainer({destination: 'Guangzhou', boxes: boxes, maxWeight: 425, maxBoxes: 10});
                 });
                 it("returns false", () => {
                     expect(smallerShippingContainer.addBox(newBox)).toEqual(false);
@@ -93,7 +93,7 @@ describe("ShippingContainer", () => {
             describe("when exceeding max boxes", () => {
                 let fullShippingContainer;
                 beforeEach(() => {
-                    fullShippingContainer = new ShippingContainer({destination: 'Corpus Christi', boxes: boxes, max_weight: 500, max_boxes: 2});
+                    fullShippingContainer = new ShippingContainer({destination: 'Corpus Christi', boxes: boxes, maxWeight: 500, maxBoxes: 2});
                 });
                 it("returns false", () => {
                     expect(fullShippingContainer.addBox(newBox)).toEqual(false);
