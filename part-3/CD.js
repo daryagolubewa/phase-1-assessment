@@ -1,7 +1,7 @@
-class CD {
-    constructor(options = {}) {
+class CD extends Item {
+    constructor(options = {})
+    super() {
         this.runtime = options.runtime;
-        this.title = options.title;
         this.artist = options.artist;
         this.label = options.label;
     }

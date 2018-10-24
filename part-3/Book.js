@@ -1,7 +1,7 @@
-class Book {
-  constructor(options = {}) {
+class Book extends Item  {
+  constructor(options = {})
+  super() {
     this.length = options.length;
-    this.title = options.title;
     this.author = options.author;
     this.format = options.format;
     this.language = options.language;

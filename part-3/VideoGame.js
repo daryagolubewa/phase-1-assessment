@@ -1,7 +1,7 @@
-class VideoGame {
-    constructor(options = {}) {
+class VideoGame extends Item  {
+    constructor(options = {}) 
+    super() {
         this.platform = options.platform;
-        this.title = options.title;
         this.developer = options.developer;
         this.genre = options.genre;
     }

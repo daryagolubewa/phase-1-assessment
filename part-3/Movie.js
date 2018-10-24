@@ -1,7 +1,7 @@
-class Movie {
-    constructor(options = {}) {
+class Movie extends Item  {
+    constructor(options = {})
+    super() {
         this.runtime = options.runtime;
-        this.title = options.title;
         this.format = options.format;
     }
 
